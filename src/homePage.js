@@ -1,7 +1,7 @@
 import { generalFuncModule as module } from "./generalFunctions";
-const createHomePage = function()
+const createHomePage = function(doc)
 {
-    const page = document.querySelector(".content")
+    const page = doc
     const homeDiv =  module.insertElement('div','homeContent',"",page)
     const homeTextDiv = module.insertElement('div','homeTextContent',"",homeDiv)
 
