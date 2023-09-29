@@ -41,9 +41,13 @@ body {
 }
 .homeContent,.menuContent,.aboutUsContent,.contactContent
 {
-    background-color: black;
+    background-color: var(--darker-brown);
     width: 100vw;
     height: 90vh;
+}
+.homeContent
+{
+    visibility: hidden;
 }
 .homeImg
 {
@@ -97,7 +101,7 @@ body {
     align-items: center;
     
 }
-.home:hover::before,.menu:hover::before,.aboutUs:hover::before,.contacts:hover::before
+.home::before,.menu::before,.aboutUs::before,.contacts::before
 {
     position: absolute;
     display: block;
@@ -107,5 +111,88 @@ body {
     height: 1vh;
     bottom: -1vh;
     background-color: var(--dark-brown);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.home:hover::before,.menu:hover::before,.aboutUs:hover::before,.contacts:hover::before
+{
+   opacity: 1;
+
+}
+
+.menuContent
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+.menuItems
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vh;
+    column-gap: 9vw;
+    border-radius: 10px;
+    background-color: var(--beige);
+    width: 60%;
+    height: 90%;
+}
+.menuTitle
+{
+    color: var(--beige);
+    font-size: 2vw;
+}
+.item
+{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s;
+    border-radius: 20px;
+}
+.item:hover
+{
+    background-color: #f3ebda;
+}
+.itemImage
+{
+    height: 60%;
+    width: 60%;
+}
+.itemName
+{
+    font-size: max(2vw,10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--medium-brown);
+}
+.description
+{
+    font-size: max(1vw,10px);
+    text-align: center;
+    width: 60%;
+    height: 20%;
+
+}
+.itemContent
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+}
+.Price
+{
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
 }
 
