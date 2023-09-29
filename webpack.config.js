@@ -8,6 +8,7 @@ module.exports =
          menuPage:'./src/menuPage.js',
          contactPage:'./src/contactPage.js',
          aboutUsPage:'./src/aboutUsPage.js',
+         generalFunctions:'./src/generalFunctions.js'
     },
 
     output:
