@@ -16,8 +16,9 @@ body {
     background-color: var(--beige);
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
 }
 .header
 {
@@ -64,10 +65,12 @@ body {
 }
 .homeTitle,.homeText
 {
+    user-select: none;
     color: var(--beige);
 }
 .homeTitle
 {  
+    user-select: none;
     font-size: 10vw;
 }
 .homeText
@@ -76,6 +79,7 @@ body {
 }
 .titleContent
 {
+    user-select: none;
     font-size: 3vw;
     color: var(--darker-brown);
     transition: all 0.5s;
@@ -95,6 +99,8 @@ body {
 
 .home,.menu,.aboutUs,.contacts
 {
+    user-select: none;
+    width: 4vw;
     position: relative;
     font-size: max(1vw,10px);
     color: var(--darker-brown);
@@ -115,13 +121,18 @@ body {
     bottom: -1vh;
     background-color: var(--light-brown);
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
 }
 .home:hover::before,.menu:hover::before,.aboutUs:hover::before,.contacts:hover::before
 {
    opacity: 1;
 
 }
+.home:active,.menu:active,.aboutUs:active,.contacts:active
+{
+    font-size: 15px;
+}
+
 
 .menuContent
 {
@@ -146,6 +157,7 @@ body {
 }
 .menuTitle
 {
+    user-select: none;
     box-shadow: 0px 1px 0px 0px var(--beige);
     color: var(--beige);
     font-size: 2vw;
@@ -172,6 +184,7 @@ body {
 }
 .itemName
 {
+    user-select: none;
     font-size: max(2vw,10px);
     display: flex;
     justify-content: center;
@@ -180,6 +193,7 @@ body {
 }
 .description
 {
+    user-select: none;
     font-size: max(1vw,10px);
     text-align: center;
     width: 60%;
@@ -196,6 +210,7 @@ body {
 }
 .Price
 {
+    user-select: none;
     font-size: 2vw;
     display: flex;
     align-items: center;
@@ -223,6 +238,7 @@ body {
 }
 .aboutUsTitle,.aboutUsInfo
 {
+    user-select: none;
     text-align: center;
     display: flex;
     align-items: center;
@@ -231,6 +247,7 @@ body {
 }
 .aboutUsInfo
 {
+    user-select: none;
     width: 80%;
     font-size: max(3vw,20px);
 }
@@ -243,6 +260,7 @@ body {
 }
 .contactTitle
 {
+    user-select: none;
     text-align: center;
     display: flex;
     align-items: center;
@@ -251,6 +269,7 @@ body {
 }
 .contactSource
 {
+    user-select: none;
     text-align: center;
     display: flex;
     align-items: center;
