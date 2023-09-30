@@ -8,6 +8,6 @@ const createContactPage = function(doc)
     module.insertElement('div',"contactSource","exampleEmail@.com",contactPageDiv)
     module.insertElement('div',"contactSource","exampleEmail@.com",contactPageDiv)
     module.insertElement('div',"contactSource","Our phone: 440:examplePhone",contactPageDiv)
-
+    return contactPageDiv
 }
 export {createContactPage}
